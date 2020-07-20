@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tovisit_charmi_c0768448_android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Menu.DistanceFragment"></activity>
-        <activity android:name=".Menu.MapFragment" />
-        <activity android:name=".Menu.DetailMapFragment" />
-        <activity android:name=".DashboardFragment" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC4-tcWhHKfX1nNspuNUxJVYBPbvjGVW78" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Activities.MainActivity">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="Favourite Places"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
