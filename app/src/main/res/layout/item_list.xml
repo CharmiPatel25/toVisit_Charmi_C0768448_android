@@ -28,9 +28,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/alegreya_sans_sc_bold"
+        android:fontFamily="sans-serif"
         android:text="TextView"
+        android:textColor="#5A1865"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imgDelete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/alegreya_sans_sc_medium"
+        android:fontFamily="sans-serif"
+        android:textColor="#5A1865"
+        android:textStyle="bold"
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/imgEdit"
@@ -54,7 +58,7 @@
         android:layout_height="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_action_delete"
+        app:srcCompat="@drawable/delete"
          />
 
     <ImageView
@@ -63,7 +67,7 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_action_edit"
+        app:srcCompat="@drawable/edit"
          />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

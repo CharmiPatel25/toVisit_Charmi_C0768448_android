@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -83,7 +84,7 @@ public class MapFragment extends BaseMapFragment implements GoogleMap.OnMarkerCl
     private void initViews(View view) {
         et_search = view.findViewById(R.id.et_search);
         img_find = view.findViewById(R.id.find);
-        img_find.setOnClickListener(new View.OnClickListener() {
+        img_find.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 getLocation();
@@ -122,6 +123,9 @@ public class MapFragment extends BaseMapFragment implements GoogleMap.OnMarkerCl
                 break;
             case R.id.action_museums:
                 searchNearBy("museum");
+                break;
+            case R.id.action_school:
+                searchNearBy("school");
                 break;
         }
         return super.onOptionsItemSelected(item);

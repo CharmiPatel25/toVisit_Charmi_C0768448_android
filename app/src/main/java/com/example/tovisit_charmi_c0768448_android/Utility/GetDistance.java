@@ -53,7 +53,7 @@ public class GetDistance  extends AsyncTask<Object, Object, Object[]> {
                 StringBuilder builder = new StringBuilder();
                 builder.append("Duration: "+ distance.getDuration() + "\n");
                 builder.append("Distance: "+ distance.getDistance());
-                Helper.showAlert(context, "Your Information", builder.toString());
+                Helper.showAlert(context, "Information", builder.toString());
             }
         }
     }

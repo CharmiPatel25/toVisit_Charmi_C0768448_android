@@ -54,7 +54,7 @@ public class DistanceFragment extends BaseMapFragment {
         String title = FetchAddressStore.execute(getContext(), location);
         MarkerOptions markerOptions = new MarkerOptions().position(location)
                 .title(title)
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
                 .draggable(true);
         Marker marker = mMap.addMarker(markerOptions);
         markersList.add(marker);
@@ -73,7 +73,7 @@ public class DistanceFragment extends BaseMapFragment {
                 if (markersList.size() == 2) {
                     calculateDistance();
                 } else {
-                    Helper.showAlert(getContext(), "Error", "Please drop two markers on map for further actions.");
+                    Helper.showAlert(getContext(), "Error", "Please drop two markers on map.");
                 }
                 break;
             case R.id.action_clear:

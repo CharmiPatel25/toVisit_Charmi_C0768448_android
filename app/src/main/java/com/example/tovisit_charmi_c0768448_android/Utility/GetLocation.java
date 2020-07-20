@@ -13,6 +13,8 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
+import static com.example.tovisit_charmi_c0768448_android.Utility.GoogleAPIStore.*;
+
 public class GetLocation  extends AsyncTask<Object, Place, Place> {
     GoogleMap mMap;
 
@@ -22,7 +24,7 @@ public class GetLocation  extends AsyncTask<Object, Place, Place> {
         String searchText = (String) objects[1];
         Place place = null;
         try {
-            place = GoogleAPIStore.FetchLocation(searchText);
+            place = FetchLocation(searchText);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
@@ -39,7 +41,7 @@ public class GetLocation  extends AsyncTask<Object, Place, Place> {
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(place.getLocation())
                 .title(place.getName() + " : " + place.getVicinity())
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         mMap.addMarker(markerOptions);
         // Move camera
         CameraPosition cameraPosition = CameraPosition.builder()

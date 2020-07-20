@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d3d3d3"
+    android:background="#A2BCEA"
     tools:context=".Menu.MapFragment">
 
     <fragment
@@ -26,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:ems="10"
-        android:fontFamily="@font/alegreya_sans_sc_medium"
-        android:hint="search location"
+        android:fontFamily="sans-serif"
+        android:hint="Search Destination"
         android:inputType="textPersonName"
         android:paddingStart="16dp"
         android:textColor="#000000"

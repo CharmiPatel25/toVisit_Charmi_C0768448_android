@@ -62,7 +62,7 @@ public class DetailMapFragment extends BaseMapFragment implements GoogleMap.OnMa
     private void setCurrentLocationMarker(Place place) {
         MarkerOptions markerOptions = new MarkerOptions().position(place.getLocation())
                 .title(place.getName() + " : "+ place.getVicinity())
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
                 .draggable(isEdit);
         mMap.setOnMarkerDragListener(this);
         mMap.setOnMarkerClickListener(this);
@@ -83,7 +83,7 @@ public class DetailMapFragment extends BaseMapFragment implements GoogleMap.OnMa
         place.setVisited(false);
         place.setVicinity(FetchAddressStore.execute(getContext(), marker.getPosition()));
         placeService.update(place);
-        Helper.showAlert(getContext(), "Alert!", "Place updated successfully.");
+        Helper.showAlert(getContext(), "Alert!", "Place updated!.");
     }
 
     @Override
@@ -91,7 +91,7 @@ public class DetailMapFragment extends BaseMapFragment implements GoogleMap.OnMa
         if (isEdit) {return false;}
         place.setVisited(true);
         placeService.update(place);
-        Helper.showAlert(getContext(), place.getName() + " : " + place.getVicinity(), "You have visited this place.");
+        Helper.showAlert(getContext(), place.getName() + " : " + place.getVicinity(), "Already been here.");
         return false;
     }
 

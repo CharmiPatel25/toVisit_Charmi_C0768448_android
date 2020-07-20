@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="#68E1D2"
+    android:background="#D2ECEA"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -14,19 +14,19 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="68dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+        app:srcCompat="@drawable/menu1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textStyle="bold"
+        android:text="Please Select"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#121111" />
+        android:textColor="#121111"
+        android:textStyle="bold" />
 
 </LinearLayout>

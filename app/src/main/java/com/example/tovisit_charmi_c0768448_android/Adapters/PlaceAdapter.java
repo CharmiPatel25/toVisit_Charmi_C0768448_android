@@ -72,7 +72,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     private void showAlert(final Context context, final Place place, final boolean isDelete, final View v) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder.setTitle("Alert");
-        alertDialogBuilder.setMessage(isDelete ? "Do you want to delete this place?" : "Do you want to edit this place?");
+        alertDialogBuilder.setMessage(isDelete ? "Are you sure you want to delete this place?" : "Do you want to edit this place?");
         alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -106,7 +106,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         if (dashboardFragment != null) {
             dashboardFragment.getPlacesFromDB();
         }
-        Helper.showAlert(context, "Alert!", "Place deleted successfully.");
+        Helper.showAlert(context, "Alert!", "Place deleted!");
     }
 
     private void pushToEdit(View v, Place place, boolean isEdit) {

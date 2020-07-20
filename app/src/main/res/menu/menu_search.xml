@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_detail"
-        android:title="Search Nearby"
+        android:title="Nearby Places "
         app:showAsAction="always">
         <menu>
             <item
@@ -15,6 +15,9 @@
             <item
                 android:id="@+id/action_museums"
                 android:title="Museums" />
+            <item
+                android:id="@+id/action_school"
+                android:title="Schools" />
         </menu>
     </item>
 </menu>

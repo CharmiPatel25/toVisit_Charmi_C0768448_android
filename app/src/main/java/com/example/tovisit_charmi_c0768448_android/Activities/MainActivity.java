@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction mFragTrans = manager.beginTransaction();
         mFragTrans.add(R.id.container, new DashboardFragment());
-        getSupportActionBar().setTitle("Dashboard");
+        getSupportActionBar().setTitle("My List");
         mFragTrans.commit();
         setUpNavigationDrawer();
     }
